@@ -1,0 +1,23 @@
+<p>angular-calculator works!</p>
+Number 1
+<input type="number" (change)="firstChange($event.target.value)" [value]="number1">
+
+<select
+  class="form-input"
+  [value]="operator"
+  (change)="operatorChange($event.target.value)">
+  <option value="+">+</option>
+  <option value="-">-</option>
+  <option value="*">*</option>
+  <option value="/">/</option>
+</select>
+
+Number2
+<input type="number" (change)="secondChange($event.target.value)" [value]="number2">
+
+<div>
+  <button (click)="calculate()">
+    Thực thi
+  </button>
+</div>
+<p>Result: {{result}}</p>
